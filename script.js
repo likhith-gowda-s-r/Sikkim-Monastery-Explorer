@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ================================
+    
     // AI Chatbot
-    // ================================
+    
 
     const chatToggle = document.querySelector('.chatbot-toggle');
     const chatWidget = document.querySelector('.chatbot-widget');
@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatSendButton = document.getElementById('chatbot-send');
 
     // Groq configuration (Llama 3.1 8B Instant)
-    // IMPORTANT: For production, NEVER expose this key in frontend JS.
-    // Use a backend proxy instead. This is only for local/demo usage.
+   
+   
     const GROQ_API_KEY = 'enter your groq api key here ';
     const GROQ_MODEL = 'llama-3.1-8b-instant';
 
@@ -145,3 +145,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
