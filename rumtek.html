@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumtek Dharma Chakra Centre | Sikkim Monasteries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Sacred Sikkim</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#monasteries">Monasteries</a></li>
+            </ul>
+        </nav>
+        <div class="panorama-wrapper">
+            <div id="panorama-banner" class="panorama-banner" aria-label="360 degree virtual tour of Rumtek Monastery"></div>
+            <div class="hero hero-overlay">
+                <h2>Rumtek Dharma Chakra Centre</h2>
+                <p class="hero-subtitle">East Sikkim • Karma Kagyu Tradition</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="monastery-detail">
+        <div class="container section">
+            <a href="index.html" class="back-link">← Back to monasteries</a>
+            
+            <h1>Rumtek Dharma Chakra Centre</h1>
+            <p class="meta">East Sikkim • Established 1966 • Karma Kagyu Tradition</p>
+
+            <div class="content-grid">
+                <div class="info-blocks">
+                    <div class="info-block">
+                        <h3>History</h3>
+                        <p>Rumtek Monastery, also known as the Dharma Chakra Centre, is the largest monastery in Sikkim and serves as the seat in exile of the Gyalwang Karmapa of the Karma Kagyu sect. The original monastery was built in the mid-18th century by the 9th Karmapa but fell into disrepair. In 1966, the 16th Karmapa, Rangjung Rigpe Dorje, rebuilt it as a replica of the Kagyu headquarters in Tibet. It stands at approximately 5,500 feet above sea level, about 23 km from Gangtok.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Architecture & Construction</h3>
+                        <p>The four-storied main temple exemplifies traditional Tibetan Buddhist architecture. It features a golden roof ornament (ghanzira) with five symbolic shapes representing the Buddha families. The entrance is guarded by the Four Guardian Kings. Inside, rich Tibetan murals, intricate woodwork, and vibrant thangka paintings adorn the walls. The monastery was built using stone, wood, and traditional materials, following the exact layout of the Tsurphu Monastery in Tibet. Skilled artisans from Tibet and Sikkim contributed to its construction.</p>
+                    </div>
+                </div>
+                <div class="map-card">
+                    <h3>Location & Directions</h3>
+                    <div class="map-embed">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Rumtek+Monastery+Sikkim&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen="" loading="lazy"
+                            title="Rumtek Monastery on Google Maps">
+                        </iframe>
+                    </div>
+                    <div style="padding: 1rem 1.25rem;">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Rumtek+Monastery+Sikkim" target="_blank" rel="noopener" class="directions-btn">
+                            Get Directions →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Digitize and Showcase Monasteries of Sikkim. Tourism and Cultural Preservation.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof pannellum !== 'undefined') {
+                pannellum.viewer('panorama-banner', {
+                    type: 'equirectangular',
+                    panorama: 'https://pannellum.org/images/alma.jpg',
+                    autoLoad: true,
+                    showControls: true,
+                    compass: true,
+                    mouseZoom: true,
+                    draggable: true,
+                    hfov: 100,
+                    minHfov: 50,
+                    maxHfov: 120
+                });
+            }
+        });
+    </script>
+</body>
+</html>

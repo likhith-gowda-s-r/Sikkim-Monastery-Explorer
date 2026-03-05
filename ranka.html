@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranka (Lingdum) Monastery | Sikkim Monasteries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Sacred Sikkim</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#monasteries">Monasteries</a></li>
+            </ul>
+        </nav>
+        <div class="panorama-wrapper">
+            <div id="panorama-banner" class="panorama-banner" aria-label="360 degree virtual tour of Ranka (Lingdum) Monastery"></div>
+            <div class="hero hero-overlay">
+                <h2>Ranka (Lingdum) Monastery</h2>
+                <p class="hero-subtitle">East Sikkim • Modern Monastery with Scenic Setting</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="monastery-detail">
+        <div class="container section">
+            <a href="index.html" class="back-link">← Back to monasteries</a>
+            
+            <h1>Ranka (Lingdum) Monastery</h1>
+            <p class="meta">East Sikkim (near Gangtok) • Completed in the late 20th century • Karma Kagyu Tradition</p>
+
+            <div class="content-grid">
+                <div class="info-blocks">
+                    <div class="info-block">
+                        <h3>History</h3>
+                        <p>Ranka, also known as Lingdum Monastery, is a relatively new but visually striking monastery located about 20 km from Gangtok. It belongs to the Karma Kagyu school of Tibetan Buddhism and serves as a large monastic training centre for young monks. Surrounded by forested hills and terraced fields, the monastery has quickly become a favourite stop for visitors due to its tranquil setting and open courtyards that welcome tourists and pilgrims alike.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Architecture & Construction</h3>
+                        <p>The monastery complex features a grand courtyard framed by multi‑storeyed monastic blocks and a richly decorated main temple. Its design blends traditional Tibetan motifs—multi‑tiered roofs, colourful cornices, guardian deities—with modern construction techniques in concrete and brick. Prayer wheels line the approach, while the main assembly hall houses a large statue of Buddha Shakyamuni and vivid murals depicting Buddhist cosmology. The wide open plaza makes it ideal for photography and festivals.</p>
+                    </div>
+                </div>
+                <div class="map-card">
+                    <h3>Location & Directions</h3>
+                    <div class="map-embed">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Lingdum+Ranka+Monastery+Sikkim&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen="" loading="lazy"
+                            title="Ranka (Lingdum) Monastery on Google Maps">
+                        </iframe>
+                    </div>
+                    <div style="padding: 1rem 1.25rem;">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Lingdum+Ranka+Monastery+Sikkim" target="_blank" rel="noopener" class="directions-btn">
+                            Get Directions →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Digitize and Showcase Monasteries of Sikkim. Tourism and Cultural Preservation.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof pannellum !== 'undefined') {
+                pannellum.viewer('panorama-banner', {
+                    type: 'equirectangular',
+                    panorama: 'https://pannellum.org/images/alma.jpg',
+                    autoLoad: true,
+                    showControls: true,
+                    compass: true,
+                    mouseZoom: true,
+                    draggable: true,
+                    hfov: 100,
+                    minHfov: 50,
+                    maxHfov: 120
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

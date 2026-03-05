@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubdi Monastery | Sikkim Monasteries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Sacred Sikkim</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#monasteries">Monasteries</a></li>
+            </ul>
+        </nav>
+        <div class="panorama-wrapper">
+            <div id="panorama-banner" class="panorama-banner" aria-label="360 degree virtual tour of Dubdi Monastery"></div>
+            <div class="hero hero-overlay">
+                <h2>Dubdi Monastery</h2>
+                <p class="hero-subtitle">West Sikkim (Yuksom) • Oldest in Sikkim</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="monastery-detail">
+        <div class="container section">
+            <a href="index.html" class="back-link">← Back to monasteries</a>
+            
+            <h1>Dubdi Monastery</h1>
+            <p class="meta">West Sikkim (Yuksom) • Established 1701 • Oldest Monastery in Sikkim</p>
+
+            <div class="content-grid">
+                <div class="info-blocks">
+                    <div class="info-block">
+                        <h3>History</h3>
+                        <p>Dubdi Monastery, also known as Yuksom Monastery, holds the distinction of being the oldest monastery in Sikkim. It was built in 1701 and is intimately linked to the founding of the state. Located in the Geyzing subdivision of West Sikkim, it sits at an altitude of about 7,000 feet. The monastery is approximately 3 km (or a one-hour walk) from Yuksom, the historic capital where the first Chogyal of Sikkim was crowned in 1642. Pilgrims often visit Dubdi as part of the sacred Buddhist circuit.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Architecture & Construction</h3>
+                        <p>Dubdi is a compact, two-story stone and wood structure built in the traditional Bhutanese and Tibetan style. Its remote hillside location required materials to be carried up on foot. The monastery features a square plan with a prayer hall, housing statues and sacred texts. The roof is constructed with wooden shingles and features a distinctive stupa-like gilded pinnacle. Due to its age and secluded setting, it remains one of the most authentic representations of early Sikkimese monastic architecture.</p>
+                    </div>
+                </div>
+                <div class="map-card">
+                    <h3>Location & Directions</h3>
+                    <div class="map-embed">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Dubdi+Monastery+Yuksom+Sikkim&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen="" loading="lazy"
+                            title="Dubdi Monastery on Google Maps">
+                        </iframe>
+                    </div>
+                    <div style="padding: 1rem 1.25rem;">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Dubdi+Monastery+Yuksom+Sikkim" target="_blank" rel="noopener" class="directions-btn">
+                            Get Directions →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Digitize and Showcase Monasteries of Sikkim. Tourism and Cultural Preservation.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof pannellum !== 'undefined') {
+                pannellum.viewer('panorama-banner', {
+                    type: 'equirectangular',
+                    panorama: 'https://pannellum.org/images/alma.jpg',
+                    autoLoad: true,
+                    showControls: true,
+                    compass: true,
+                    mouseZoom: true,
+                    draggable: true,
+                    hfov: 100,
+                    minHfov: 50,
+                    maxHfov: 120
+                });
+            }
+        });
+    </script>
+</body>
+</html>

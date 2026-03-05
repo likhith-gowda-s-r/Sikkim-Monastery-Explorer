@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phodong Monastery | Sikkim Monasteries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Sacred Sikkim</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#monasteries">Monasteries</a></li>
+            </ul>
+        </nav>
+        <div class="panorama-wrapper">
+            <div id="panorama-banner" class="panorama-banner" aria-label="360 degree virtual tour of Phodong Monastery"></div>
+            <div class="hero hero-overlay">
+                <h2>Phodong Monastery</h2>
+                <p class="hero-subtitle">North Sikkim • Kagyupa Monastery with Vibrant Chaam</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="monastery-detail">
+        <div class="container section">
+            <a href="index.html" class="back-link">← Back to monasteries</a>
+            
+            <h1>Phodong Monastery</h1>
+            <p class="meta">North Sikkim • Originally founded in the early 18th century • Karma Kagyu Order</p>
+
+            <div class="content-grid">
+                <div class="info-blocks">
+                    <div class="info-block">
+                        <h3>History</h3>
+                        <p>Phodong Monastery, perched on a hillside about 28 km from Gangtok, is one of the six most important monasteries in Sikkim. The original gompa was founded in the early 18th century under the patronage of the Chogyal rulers. It later collapsed and was rebuilt in the early 20th century. Phodong is closely associated with the Karma Kagyu lineage and is known for its colourful Chaam (masked dance) festival held around Losoong, the Sikkimese New Year.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Architecture & Construction</h3>
+                        <p>The rebuilt monastery combines a bright white base with red and yellow ornamentation typical of Kagyu institutions. Its prayer hall features polished wooden floors, painted beams, and a richly decorated altar with statues of the Buddha, Guru Rinpoche, and lineage masters. The complex is arranged along a terrace that looks out over the valleys of North Sikkim, and prayer flags flutter across the hillside. Traditional stone masonry and timber framing were used, with later maintenance in reinforced concrete to stabilise the ageing structure.</p>
+                    </div>
+                </div>
+                <div class="map-card">
+                    <h3>Location & Directions</h3>
+                    <div class="map-embed">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Phodong+Monastery+Sikkim&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen="" loading="lazy"
+                            title="Phodong Monastery on Google Maps">
+                        </iframe>
+                    </div>
+                    <div style="padding: 1rem 1.25rem;">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Phodong+Monastery+Sikkim" target="_blank" rel="noopener" class="directions-btn">
+                            Get Directions →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Digitize and Showcase Monasteries of Sikkim. Tourism and Cultural Preservation.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof pannellum !== 'undefined') {
+                pannellum.viewer('panorama-banner', {
+                    type: 'equirectangular',
+                    panorama: 'https://pannellum.org/images/alma.jpg',
+                    autoLoad: true,
+                    showControls: true,
+                    compass: true,
+                    mouseZoom: true,
+                    draggable: true,
+                    hfov: 100,
+                    minHfov: 50,
+                    maxHfov: 120
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

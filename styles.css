@@ -1,0 +1,732 @@
+/* ========================================
+   Sikkim Monasteries - Responsive Styles
+   ======================================== */
+
+:root {
+    --color-bg: #0f1419;
+    --color-surface: #1a2332;
+    --color-surface-alt: #243447;
+    --color-accent: #c9a227;
+    --color-accent-light: #e8d48a;
+    --color-text: #e8e6e3;
+    --color-text-muted: #a0aec0;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Source Sans 3', -apple-system, sans-serif;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    margin-bottom: 1rem;
+    color: var(--color-accent-light);
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* Header */
+.site-header {
+    background: var(--color-bg);
+    position: relative;
+}
+
+/* 360° Virtual Tour Banner */
+.panorama-banner {
+    width: 100%;
+    height: 55vh;
+    min-height: 320px;
+    max-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.panorama-banner .pnlm-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.panorama-banner .pnlm-render-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.panorama-banner .pnlm-sprite {
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
+
+/* Hint overlay for 360 interaction */
+.panorama-banner::after {
+    content: 'Drag to explore 360°';
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.9);
+    font-size: 0.85rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    pointer-events: none;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .panorama-banner {
+        height: 45vh;
+        min-height: 280px;
+    }
+    
+    .panorama-banner::after {
+        font-size: 0.75rem;
+        bottom: 3rem;
+    }
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--color-accent);
+}
+
+/* Mobile nav toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--color-accent);
+}
+
+/* Panorama wrapper */
+.panorama-wrapper {
+    position: relative;
+}
+
+/* 360° Virtual Tour Banner */
+.panorama-banner {
+    width: 100%;
+    height: 60vh;
+    min-height: 340px;
+    max-height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+.panorama-banner .pnlm-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.panorama-banner .pnlm-render-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.panorama-banner .pnlm-sprite {
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
+
+/* Hint overlay for 360 interaction */
+.panorama-banner::after {
+    content: 'Drag to explore 360°';
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.9);
+    font-size: 0.85rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    pointer-events: none;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .panorama-banner {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    .panorama-banner::after {
+        font-size: 0.75rem;
+        bottom: 4rem;
+    }
+}
+
+/* Hero - overlaid on panorama */
+.hero {
+    position: relative;
+    padding: 2rem 1.25rem 3rem;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.25rem 2.5rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(15,20,25,0.85) 50%, var(--color-bg) 100%);
+    pointer-events: none;
+}
+
+.hero-overlay * {
+    pointer-events: auto;
+}
+
+.hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.hero-desc {
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sections */
+.section {
+    padding: 4rem 0;
+}
+
+.about-section {
+    background: var(--color-surface);
+}
+
+.about-section .lead {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 800px;
+}
+
+/* Monastery grid */
+.monastery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .monastery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .monastery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.monastery-card {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+.monastery-card:hover {
+    transform: translateY(-4px);
+}
+
+.monastery-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-image {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.monastery-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+}
+
+.card-content {
+    padding: 1.25rem;
+}
+
+.card-content h3 {
+    margin-bottom: 0.25rem;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* Map section */
+.map-section {
+    background: var(--color-surface);
+}
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Contact */
+.contact-section a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+    padding: 2rem 1.25rem;
+    text-align: center;
+    background: var(--color-surface-alt);
+}
+
+.site-footer p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* ========================================
+   Chatbot Widget
+   ======================================== */
+
+.chatbot-toggle {
+    position: fixed;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    z-index: 120;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 1.4rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.chatbot-toggle:hover {
+    transform: translateY(-2px);
+    background: var(--color-accent-light);
+    box-shadow: 0 6px 26px rgba(0, 0, 0, 0.55);
+}
+
+.chatbot-widget {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 340px;
+    max-width: 95vw;
+    max-height: 70vh;
+    background: var(--color-surface-alt);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition), transform var(--transition);
+    z-index: 130;
+}
+
+.chatbot-widget.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.chatbot-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    background: linear-gradient(135deg, rgba(201,162,39,0.14), rgba(15,20,25,0.96));
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-accent-light);
+}
+
+.chatbot-header p {
+    margin: 0.15rem 0 0;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.chatbot-close {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.chatbot-messages {
+    padding: 0.9rem 0.9rem 0.4rem;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    scroll-behavior: smooth;
+}
+
+.chatbot-message {
+    display: flex;
+}
+
+.chatbot-message--user {
+    justify-content: flex-end;
+}
+
+.chatbot-message--bot {
+    justify-content: flex-start;
+}
+
+.chatbot-message-content {
+    max-width: 85%;
+    padding: 0.55rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.chatbot-message--user .chatbot-message-content {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border-bottom-right-radius: 3px;
+}
+
+.chatbot-message--bot .chatbot-message-content {
+    background: rgba(36,52,71,0.95);
+    color: var(--color-text);
+    border-bottom-left-radius: 3px;
+}
+
+.chatbot-input-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.7rem 0.6rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    background: rgba(15,20,25,0.96);
+}
+
+.chatbot-input-row input[type="text"] {
+    flex: 1;
+    padding: 0.45rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(15,20,25,0.9);
+    color: var(--color-text);
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.chatbot-input-row input[type="text"]::placeholder {
+    color: var(--color-text-muted);
+}
+
+.chatbot-input-row button {
+    border-radius: 999px;
+    padding: 0.45rem 0.9rem;
+    border: none;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.chatbot-input-row button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.chatbot-hint {
+    margin: 0;
+    padding: 0 0.9rem 0.55rem;
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 767px) {
+    .chatbot-widget {
+        right: 0.75rem;
+        left: 0.75rem;
+        width: auto;
+        max-height: 65vh;
+    }
+
+    .chatbot-toggle {
+        right: 1.1rem;
+        bottom: 1.25rem;
+    }
+}
+
+/* ========================================
+   Monastery Detail Page Styles
+   ======================================== */
+
+.monastery-detail .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.monastery-detail .back-link:hover {
+    color: var(--color-accent-light);
+}
+
+.monastery-detail .hero-image {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+}
+
+.monastery-detail h1 {
+    margin-bottom: 0.5rem;
+}
+
+.monastery-detail .meta {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.monastery-detail .content-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .monastery-detail .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.monastery-detail .info-block h3 {
+    color: var(--color-accent-light);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.monastery-detail .info-block p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+.monastery-detail .map-card {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.monastery-detail .map-card h3 {
+    padding: 1rem 1.25rem;
+    margin: 0;
+}
+
+.monastery-detail .map-card .map-embed {
+    aspect-ratio: 16/10;
+}
+
+.monastery-detail .map-card .map-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.monastery-detail .directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background var(--transition);
+}
+
+.monastery-detail .directions-btn:hover {
+    background: var(--color-accent-light);
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 280px;
+        height: 100vh;
+        background: var(--color-surface);
+        flex-direction: column;
+        padding: 5rem 1.5rem 2rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right var(--transition);
+        z-index: 100;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .hero {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+}

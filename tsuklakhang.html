@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsuklakhang Palace Monastery | Sikkim Monasteries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Sacred Sikkim</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#monasteries">Monasteries</a></li>
+            </ul>
+        </nav>
+        <div class="panorama-wrapper">
+            <div id="panorama-banner" class="panorama-banner" aria-label="360 degree virtual tour of Tsuklakhang Palace Monastery"></div>
+            <div class="hero hero-overlay">
+                <h2>Tsuklakhang Palace Monastery</h2>
+                <p class="hero-subtitle">Gangtok • Royal Chapel of the Chogyals</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="monastery-detail">
+        <div class="container section">
+            <a href="index.html" class="back-link">← Back to monasteries</a>
+            
+            <h1>Tsuklakhang Palace Monastery</h1>
+            <p class="meta">Gangtok • Built in the late 19th century • Royal Buddhist Chapel</p>
+
+            <div class="content-grid">
+                <div class="info-blocks">
+                    <div class="info-block">
+                        <h3>History</h3>
+                        <p>Tsuklakhang is the royal chapel attached to the former palace of the Namgyal dynasty in Gangtok. Constructed during the reign of the ninth Chogyal, it served as the venue for important state rituals, coronations, and royal weddings. The monastery houses a rich collection of old scriptures, thangkas, and images of Buddhist deities. Although the monarchy ended in the 1970s, Tsuklakhang remains an active religious centre and a reminder of Sikkim’s erstwhile kingdom.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Architecture & Construction</h3>
+                        <p>The chapel is built in a traditional Tibetan style with whitewashed walls, carved wooden windows, and a gently sloping roof crowned by golden finials. Inside, elaborately painted pillars and beams frame the main prayer hall, where rows of statues and thangkas line the walls. The complex stands within the former palace grounds, surrounded by manicured lawns and views over Gangtok town. Its construction used local stone and timber, with Newari‑influenced wood carving blending with Tibetan motifs.</p>
+                    </div>
+                </div>
+                <div class="map-card">
+                    <h3>Location & Directions</h3>
+                    <div class="map-embed">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Tsuklakhang+Monastery+Gangtok+Sikkim&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen="" loading="lazy"
+                            title="Tsuklakhang Palace Monastery on Google Maps">
+                        </iframe>
+                    </div>
+                    <div style="padding: 1rem 1.25rem;">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Tsuklakhang+Monastery+Gangtok+Sikkim" target="_blank" rel="noopener" class="directions-btn">
+                            Get Directions →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Digitize and Showcase Monasteries of Sikkim. Tourism and Cultural Preservation.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof pannellum !== 'undefined') {
+                pannellum.viewer('panorama-banner', {
+                    type: 'equirectangular',
+                    panorama: 'https://pannellum.org/images/alma.jpg',
+                    autoLoad: true,
+                    showControls: true,
+                    compass: true,
+                    mouseZoom: true,
+                    draggable: true,
+                    hfov: 100,
+                    minHfov: 50,
+                    maxHfov: 120
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
